@@ -1,21 +1,15 @@
 package net.fabricmc.example;
 
-import net.fabricmc.api.ModInitializer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import net.fabricmc.loader.api.entrypoint.PreLaunchEntrypoint;
 
-public class ExampleMod implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+public class ExampleMod implements PreLaunchEntrypoint {
+
 
 	@Override
-	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		LOGGER.info("Hello Fabric world!");
+	public void onPreLaunch() {
+		System.out.println("OVERRIDING MESA VERSION! THIS ONLY WORKS ON LINUX!");
+		System.setProperty("MESA_GL_VERSION_OVERRIDE", "4.3");
+		System.setProperty("MESA_GLSL_VERSION_OVERRIDE", "430");
+		System.setProperty("MESA_SHADER_CACHE_DISABLE", "true");
 	}
 }
