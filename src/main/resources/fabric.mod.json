@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "forceopengl",
   "version": "${version}",
 
   "name": "Example Mod",
@@ -23,14 +23,13 @@
     ]
   },
   "mixins": [
-    "modid.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.14.11",
     "fabric-api": "*",
-    "minecraft": "~1.19.3",
-    "java": ">=17"
+    "minecraft": ">=1.17-alpha.21.10.a",
+    "java": ">=8"
   },
   "suggests": {
     "another-mod": "*"
