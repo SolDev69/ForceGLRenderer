@@ -3,30 +3,24 @@
   "id": "forceopengl",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "ForceGLRenderer",
+  "description": "Not to be confused with ForceGL20. This mod tricks Minecraft into thinking you're running a newer version of OpenGL then you really have.",
   "authors": [
-    "Me!"
+    "SolDev69"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/SolDev69/ForceGLRenderer"
   },
-
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
-  "environment": "*",
+  "icon": "assets/forceopengl/icon.png",
+  "environment": "client",
   "entrypoints": {
     "preLaunch": [
       "net.fabricmc.example.ExampleMod"
     ]
   },
-  "mixins": [
-  ],
-
   "depends": {
-    "fabricloader": ">=0.14.11"
+    "fabricloader": ">=0.14.8",
     "minecraft": ">=1.17-alpha.21.10.a",
     "java": ">=8"
   }
